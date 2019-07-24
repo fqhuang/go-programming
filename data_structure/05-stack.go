@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type StackNode struct {
+type StackNode struct { //也可以不用结构体,使用[]interface{}更简单一些
 	Data interface{}
 	Next *StackNode
 }
