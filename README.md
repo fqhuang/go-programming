@@ -1,2 +1,3 @@
-# Golang-sample-code
-Go学习笔记
+# Golang学习笔记
+
+整理学习笔记
