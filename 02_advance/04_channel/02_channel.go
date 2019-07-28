@@ -1,5 +1,9 @@
 package main
 
+/*
+	演示channel的同步作用
+*/
+
 import (
 	"fmt"
 	"time"
