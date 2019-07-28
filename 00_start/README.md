@@ -1,0 +1,5 @@
+# 介绍Ubuntu下Go环境搭建方法
+
+[01_Ubuntu-Golang环境搭建.md]()是介绍在VMware+Ubuntu18.04下搭建Golang开发环境的步骤，推荐使用;
+
+[02_Windows10-Linux子系统安装.md]()是介绍Windows10的Linux子系统的玩法，建议熟悉Linux的同学在折腾。
