@@ -7,10 +7,11 @@ package main
 */
 import (
 	"fmt"
+	"runtime"
 )
 
 func main() {
-
+	runtime.GOMAXPROCS(1)
 	done := make(chan bool)
 
 	values := []string{"a", "b", "c"}
