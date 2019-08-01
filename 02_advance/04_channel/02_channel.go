@@ -1,36 +1,32 @@
 package main
 
 /*
-	演示channel的同步作用
+	程序说明：
+	演示channel的作用之一：传输数据。
 */
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
-func send(done, quit chan bool) {
-	//等待recv完成后由send关闭
-	<-done
-	fmt.Println("那我关闭了哦")
-
-	//通知main goroutine
-	quit <- true
+func fibonacci(c, quit chan int) {
+	x, y := 0, 1
+	for {
+		select {
+		case c <- x:
+			x, y = y, x+y
+		case <-quit:
+			fmt.Println("quit")
+			return
+		}
+	}
 }
-
-func recv(done chan bool) {
-	time.Sleep(time.Second)
-	// 通知任务已完成
-	fmt.Println("对面的send可以关闭了")
-	done <- true
-}
-
 func main() {
-	done := make(chan bool)
-	quit := make(chan bool)
-	go send(done, quit)
-	go recv(done)
-	// 等待任务完成
-	<-quit
-	fmt.Println("main也结束了哦")
+	c := make(chan int)
+	quit := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			fmt.Println(<-c)
+		}
+		quit <- 0
+	}()
+	fibonacci(c, quit)
 }
