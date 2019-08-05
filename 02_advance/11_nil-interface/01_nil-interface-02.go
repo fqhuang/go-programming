@@ -6,7 +6,10 @@ package main
 
 */
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 type IPeople interface {
 	hello()
@@ -21,34 +24,38 @@ func (p *People) hello() {
 //错误：将nil的people给空接口后接口就不为nil,因为interface中的value为nil但type不为nil
 
 func errFunc() *People {
-	var p *People
 
-	return p
+	return nil
 }
 
 //正确处理返回nil给接口的方法,返回时go就确定了接口是不是nil
 func rightFunc() IPeople {
-	var p *People
 
-	return p
+	return nil
 }
 func main() {
 
-	if errFunc() == nil {
+	var i IPeople
+	i = errFunc()
+	if i == nil { //想通过接口是否为nil来判断故障，却始终判断接口非空
 
-		fmt.Println("对了哦，外部接收到也是nil")
+		fmt.Println("errFunc对了哦，外部接收到也是nil")
+		fmt.Println(reflect.TypeOf(i))
 	} else {
 
-		fmt.Println("错了咦，外部接收到不是nil哦")
-
+		fmt.Println("errFunc错了咦，外部接收到不是nil哦")
+		fmt.Println(reflect.TypeOf(i))
 	}
 
-	if rightFunc() == nil {
+	i = rightFunc()
+	if i == nil {
 
-		fmt.Println("对了哦，外部接收到也是nil")
+		fmt.Println("rightFunc对了哦，外部接收到也是nil")
+		fmt.Println(reflect.TypeOf(i))
 	} else {
 
-		fmt.Println("错了咦，外部接收到不是nil哦")
+		fmt.Println("rightFunc错了咦，外部接收到不是nil哦")
+		fmt.Println(reflect.TypeOf(i))
 
 	}
 
