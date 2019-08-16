@@ -19,8 +19,4 @@ func main() {
 	fmt.Println(b)
 }
 
-//显示版本 go version
-//编译Go语言程序
-//go build 源文件.go
-//编译并运行Go语言程序
-//go run 源文件
+

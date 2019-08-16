@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main0501() {
+func main01() {
 	//println表示输出数据后换行
 	//fmt.Println("hello")
 	//fmt.Println("world")
@@ -11,7 +11,7 @@ func main0501() {
 	fmt.Print("world")
 }
 
-func main0502(){
+func main02(){
 	a:=10
 	b:=123456
 	//格式化输出

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main0401() {
+func main01() {
 	//变量的定义
 	//var a int =10
 	//var b int =20
@@ -26,7 +26,7 @@ func main0401() {
 
 }
 
-func main0402() {
+func main02() {
 	//_表示匿名变量
 	a, _, _ := 10, 20, 30
 	fmt.Println(a)

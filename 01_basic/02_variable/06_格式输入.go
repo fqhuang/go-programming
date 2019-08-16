@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main0601() {
+func main01() {
 
 	//如果变量没有初始值 默认值为0
 	var a int
@@ -15,7 +15,7 @@ func main0601() {
 	fmt.Println(a)
 }
 
-func main0602(){
+func main02() {
 	//var a int
 	//var b int
 	var a, b int
@@ -24,10 +24,10 @@ func main0602(){
 	fmt.Println(a, b)
 }
 
-func main(){
+func main() {
 	var a int
 	var b int
 	//表示接收前3位数据
-	fmt.Scanf("%3d%d",&a,&b)
-	fmt.Println(a,b)
+	fmt.Scanf("%3d%d", &a, &b)
+	fmt.Println(a, b)
 }

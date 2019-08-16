@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main0801() {
+func main01() {
 
 	//字符类型
 	var a byte
