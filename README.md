@@ -26,10 +26,10 @@ Golang sample code, from basic to advanced,  I will update it here if I have new
 
 It is divided into 5 parts in total:
 
-- 00_start: Go environment setup
-- 01_basic:go basic syntax
-- 02_advance:go advanced programming
-- 03_packages: Common go comes with the package used
+- 00_start: go environment setup
+- 01_basic: go basic syntax
+- 02_advance: go advanced programming
+- 03_packages: golang packages
 - 04_third_party_packages: Use of some excellent third party packages
 
 
