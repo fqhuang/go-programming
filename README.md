@@ -1,5 +1,7 @@
 # Golang programming
 
+# 说明
+
 Golang sample code，由基础到高级，我在学习工作中有新的收获会也及时更新到这里。
 
 总共划分为5个部分：
@@ -17,3 +19,23 @@ Golang sample code，由基础到高级，我在学习工作中有新的收获�
 代码有任何问题可以联系我，欢迎交流指正。
 
 邮箱：CodeWithTxT@gmail.com
+
+# Description
+
+Golang sample code, from basic to advanced,  I will update it here if I have new gains in my work.
+
+It is divided into 5 parts in total:
+
+- 00_start: Go environment setup
+- 01_basic:go basic syntax
+- 02_advance:go advanced programming
+- 03_packages: Common go comes with the package used
+- 04_third_party_packages: Use of some excellent third party packages
+
+
+
+The function of each code is annotated in the code, and the more content will be Illustrated in the readme.md for the same directory. For More details, please refer to [My Learning Blog](https://bettertxt.top/).
+
+If you have any questions about the code, please contact me. Welcome to point out my mistake.
+
+Email: CodeWithTxT@gmail.com
